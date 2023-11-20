@@ -1,6 +1,6 @@
 ---
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Image } from 'astro:assets';
+import {Image} from 'astro:assets';
 ---
 
 <!DOCTYPE html>
@@ -15,44 +15,77 @@ import { Image } from 'astro:assets';
             text-align: center;
             color: white;
         }
+
         .full-width-image-header img {
             width: 100%;
             height: 500px;
             object-fit: cover;
             display: block;
         }
+
+        .img-contain {
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
 <div class="full-width-image-header">
-    <img src="/prouni.png" alt="ProUni logo" class="img-fluid" />
+    <img src="/prouni.png" alt="ProUni logo" class="img-fluid"/>
 </div>
 
 <div class="container">
     <main>
-        <section class="mb-4" style="background: #D9D9D9">
-            <img src="/ph_12717_43488.jpg" alt="School" width="100%" />
-            <h2>Brazilian Education System</h2>
-            <p>Brazil according to 2022 review, has a decentralized education system, with education being the responsibility of both the federal government and individual states and municipalities. Portuguese is the primary language of instruction in Brazilian schools. The system is divided into three main levels: early childhood education, basic education (comprising primary and secondary education), and higher education. </p>
-            <p>Basic education in Brazil is compulsory and free for children aged 4 to 17. The Brazilian curriculum typically consists of subjects like mathematics, Portuguese, history, geography, and science. One of the major challenges in the Brazilian education system has been the quality of basic education, access to education, and significant disparities in the quality of education between different regions.</p>
-            <p>Higher Education system in Brazil is diverse across both public and private institutions. The country has several world-renowned universities, including the University of São Paulo (USP) and the University of Campinas (UNICAMP). The admission process for higher education often involves a standardized exam known as the "ENEM" (Exame Nacional do Ensino Médio). Socioeconomic disparities are also in the Brazilian higher education system. There are inequalities in access to quality education, with students in more affluent areas having better educational opportunities and adequate funding for public schools has been a long-standing issue, leading to inadequate infrastructure and resources in the education sector.</p>
+        <section class="mb-4 p-5" style="background: #D9D9D9">
+            <img src="/ph_12717_43488.jpg" alt="School" width="100%"/>
+            <h2 class="mt-3">Brazilian Education System</h2>
+            <p>Brazil according to 2022 review, has a decentralized education system, with education being the
+                responsibility of both the federal government and individual states and municipalities. Portuguese is
+                the primary language of instruction in Brazilian schools. The system is divided into three main levels:
+                early childhood education, basic education (comprising primary and secondary education), and higher
+                education. </p>
+            <p>Basic education in Brazil is compulsory and free for children aged 4 to 17. The Brazilian curriculum
+                typically consists of subjects like mathematics, Portuguese, history, geography, and science. One of the
+                major challenges in the Brazilian education system has been the quality of basic education, access to
+                education, and significant disparities in the quality of education between different regions.</p>
+            <p>Higher Education system in Brazil is diverse across both public and private institutions. The country has
+                several world-renowned universities, including the University of São Paulo (USP) and the University of
+                Campinas (UNICAMP). The admission process for higher education often involves a standardized exam known
+                as the "ENEM" (Exame Nacional do Ensino Médio). Socioeconomic disparities are also in the Brazilian
+                higher education system. There are inequalities in access to quality education, with students in more
+                affluent areas having better educational opportunities and adequate funding for public schools has been
+                a long-standing issue, leading to inadequate infrastructure and resources in the education sector.</p>
         </section>
-
+        <img width="100%" src="/Screenshot%202023-11-08%20212634.png" alt="stats"/>
         <section class="mb-4">
-            <h2>What Can Be Done?</h2>
-            <p>For improvement in the quality of education, teachers must be well-trained...</p>
-            <!-- Continue with the rest of the content -->
+            <p>Brazil: public spending in education as share of GDP 2017, by level Published by Statista Research
+                Department, Nov 3, 2023</p>
+            <p>The Brazilian national government's spending in education amounted to approximately 6.3 percent of the
+                country's gross domestic product in 2017.
+                Most of the expenditure was destined to basic education, level in which the value invested by the
+                government accounted for 4.8 percent of Brazil's GDP.
+                In total, public spending in primary education represented three percent of the country's GDP.</p>
         </section>
 
-        <div class="chart-container my-4">
-            <h3>Brazil: public spending in education as share of GDP 2017, by level</h3>
-            <!-- You would insert your chart here -->
-        </div>
+        <section style="background: #73382F;">
+            <div >
+                <div class="row">
+                    <div class="col">
+                        <img src="/OIP.jpg" alt="Classroom" class="img-contain" width="100%" />
+                    </div>
+                    <div class="col p-4">
+                        <h6 style="color: #fff;">WHAT CAN BE DONE?</h6>
+                        <p style="color: #fff;">For improvement in the quality of education, teachers must be
+                            well-trained and motivated to do their jobs. The Brazilian government must reform the
+                            curriculum and other initiatives to better prepare students for the workforce.</p>
+                        <p style="color: #fff;">The government has launched initiatives such as "Mais Educação" (More
+                            Education) to improve the quality of education and reduce drop-out rates. The federal
+                            government has also established the "FIES" program, which provides loans to help students
+                            finance their higher education.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <footer class="bg-light text-center py-3">
-        <p>Visit <a href="https://www.example.com">our website</a> for more info.</p>
-    </footer>
 </div>
 </body>
 </html>

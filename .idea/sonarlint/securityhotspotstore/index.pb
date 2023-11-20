@@ -5,8 +5,6 @@ H
 src/layouts/Layout.astro,1/d/1d11b342ea05fd385899f7e4fc654f60404604f9
 E
 src/pages/index.astro,9/f/9fb1c525d9350f85b7aa1f2647cfd4eba63fab2a
-I
-src/pages/Education.astro,7/6/76c0ecbca3998cebb0746cf96ad48c7f91b29f51
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 I
