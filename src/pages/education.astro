@@ -18,7 +18,7 @@ import {Image} from 'astro:assets';
 
         .full-width-image-header img {
             width: 100%;
-            height: 500px;
+            height: 275px;
             object-fit: cover;
             display: block;
         }
@@ -29,11 +29,13 @@ import {Image} from 'astro:assets';
     </style>
 </head>
 <body>
-<div class="full-width-image-header">
-    <img src="/prouni.png" alt="ProUni logo" class="img-fluid"/>
-</div>
+
 
 <div class="container">
+    <div class="full-width-image-header">
+        <img src="/prouni.png" alt="ProUni logo" />
+
+    </div>
     <main>
         <section class="mb-4 p-5" style="background: #D9D9D9">
             <img src="/ph_12717_43488.jpg" alt="School" width="100%"/>
@@ -70,7 +72,7 @@ import {Image} from 'astro:assets';
             <div >
                 <div class="row">
                     <div class="col">
-                        <img src="/OIP.jpg" alt="Classroom" class="img-contain" width="100%" />
+                        <img src="/OIP.jpg" alt="Classroom" class="img-contain" width="100%" height="100%" />
                     </div>
                     <div class="col p-4">
                         <h6 style="color: #fff;">WHAT CAN BE DONE?</h6>
@@ -86,6 +88,16 @@ import {Image} from 'astro:assets';
             </div>
         </section>
     </main>
+    <footer class="p-1 mt-2" style="background: #D9D9D9; font-size: 11px; text-align: center">ProUni is a
+                program that
+                offers
+                scholarships
+                for low-income
+                students to
+                attend private
+                higher education
+                institutions. Visit: <a href="https://www.fapeduca.com/prouni">https://www.fapeduca.com/prouni</a> for more info
+    </footer>
 </div>
 </body>
 </html>
