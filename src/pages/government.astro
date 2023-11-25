@@ -9,40 +9,110 @@ import {Theme, Text} from '@radix-ui/themes';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industries</title>
+    <title>Government</title>
 </head>
 <body>
 <Theme>
+    <div class="flex justify-center items-center w-full">
+        <img src="/parliment-building-brazil.webp" alt="parliament" class="w-11/12 h-72">
+    </div>
+
     <div class="container">
-        <aside></aside>
-        <main>
-            <header>
-                <h1 class="text-white bg-[#A6453C] p-8 text-center">Branches of Government</h1>
-            </header>
-            <section>
-                <h3>Executive</h3>
-                <div>
-                    <img src="/lula-brazilpresident.webp" alt="executive"/>
-                    <Text>
-                    </Text>
-                </div>
-            </section>
-            <section>
-                <h3>Legislative</h3>
-                <div>
-                    <img src="/legislation-brazil.jpg" alt="legislative"/>
-                    <Text></Text>
-                </div>
-            </section>
-            <section>
-                <h3>Judicial</h3>
-                <div>
-                    <img src="/judicialbranchbrazil.jpg" alt="judicial"/>
-                    <Text></Text>
-                </div>
-            </section>
-        </main>
-        <footer></footer>
+        <div class="row mt-5 ">
+            <div class="col-md-3 p-0 m-o">
+            <aside class="bg-[#D9D9D9] mr-4 p-3">
+                <Text as="p">
+                    Brazil’s recent Presidents have not had the best reputation, especially when leaving office. With
+                    each of them failing one after the other, the problems in the country worsen, and new ones arise
+                    daily.
+                    <br/>
+                    <br/>
+                    However, Brazilian citizens are looking for a change after the re-election of former president, Luiz
+                    Inacio.
+                    <br/>
+                    <br/>
+                    Lula da Silva, in hopes of reversing harmful policies that are hurting the environment and
+                    diminishing the economy.
+                </Text>
+            </aside>
+            </div>
+            <main class="col-md-9 bg-[#D9D9D9]">
+                <header>
+                    <h1 class="p-8 text-center">Branches of Government</h1>
+                </header>
+                <section class="mb-3">
+                    <h3>Executive</h3>
+                    <div class="flex w-full space-x-5">
+                        <img src="/lula-brazilpresident.webp" alt="executive" class="w-[300px] h-[300px] object-cover"/>
+                        <Text as="p">
+                            The executive branch of government is headed by the President and administered by the
+                            Cabinet of
+                            Ministers. These members are appointed by and can be dismissed by the President. The Cabinet
+                            consists of the Chief of Staff, Secretary of Government, Institutional Security Cabinet,
+                            Central
+                            Bank, and 21 Ministries. Cabinet Ministers are responsible for managing specific ministries.
+                            They do this by evaluating ministry programs, creating policies, and properly allocating
+                            public
+                            resources.
+                        </Text>
+                    </div>
+                </section>
+                <section class="mb-3">
+                    <h3>Legislative</h3>
+                    <div class="flex w-full space-x-5">
+                        <img src="/legislation-brazil.jpg" alt="legislative" class="w-[300px] h-[300px] object-cover"/>
+                        <Text as="p">
+                            The legislative branch of government is administered by the National Congress and is
+                            responsible
+                            for writing and approving new laws. The Federal Senate and the Chamber of Deputies make up
+                            the
+                            National Congress. The Federal Senate is made up of 81 members, 3 representatives from each
+                            of
+                            the states and federal districts. Elections are alternated so one-third of the members are
+                            elected after a 4 year period and the other two-thirds are elected after the next 4 years.
+                            Each
+                            senator serves an 8-year elected term. The Chamber of Deputies consists of 513 members, who
+                            are
+                            elected based on the population size of their specific state or federal district. These
+                            individuals serve 4-year elected terms.
+                        </Text>
+                    </div>
+                </section>
+                <section class="mb-3">
+                    <h3>Judicial</h3>
+                    <div class="flex w-full space-x-5">
+                        <img src="/judicialbranchbrazil.jpg" alt="judicial" class="w-[300px] h-[300px] object-cover"/>
+                        <Text as="p">The judicial branch of government is designed based on a civil law adversarial
+                            system,
+                            which means that cases are tried before a jury. The courts are divided into different
+                            jurisdictions throughout state and federal governments with some specially designated
+                            courts,
+                            including: Labor Justice, Electoral Justice, and Military Justice. The two highest level
+                            courts
+                            are: the Superior Justice Tribunal and the Supreme Federal Court. The Superior Justice
+                            Tribunal
+                            hears cases when two or more Federal Regional Tribunals have ruled differently on the same
+                            federal laws or when a Federal Regional Tribunal rules in violation of a federal law. The
+                            Supreme Federal Court hears cases when a Federal Regional Tribunal rules in violation of the
+                            Constitution.
+                        </Text>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="row">
+            <footer class="col-md-12 bg-[#D9D9D9] mt-4">
+            <p>Footer with links to different pages of Brazilian govt.</p>
+            <p>STJ Homepage - <a href="https://international.stj.jus.br/en">https://international.stj.jus.br/en</a>
+            </p>
+            <p>Official lists of legislations - <a href="http://www4.planalto.gov.br/legislacao/">www4.planalto.gov.br/legislacao/</a>
+            </p>
+            <p>Main govt homepage - <a href="https://www.gov.br/planalto/en/">https://www.gov.br/planalto/en/</a>
+            </p>
+            <p>US Dept of State webpage for Brazil - <a href="https://www.state.gov/countries-areas/brazil">https://www.state.gov/countries-areas/brazil</a>
+            </p>
+        </footer>
+        </div>
     </div>
 </Theme>
 </body>
