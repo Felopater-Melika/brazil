@@ -8,33 +8,13 @@ import '@radix-ui/themes/styles.css';
 import {ViewTransitions} from 'astro:transitions';
 import {Theme} from '@radix-ui/themes';
 
-const anim = {
-    old: {
-        name: 'fadeIn',
-        duration: '3s',
-        easing: 'linear',
-        fillMode: 'forwards',
-    },
-    new: {
-        name: 'fadeOut',
-        duration: '3s',
-        easing: 'linear',
-        fillMode: 'backwards',
-    }
-};
-
-const myFade = {
-    forwards: anim,
-    backwards: anim,
-};
-const {title} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="description" content="Astro description"/>
+    <meta name="description" content="Brazil Issues"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
