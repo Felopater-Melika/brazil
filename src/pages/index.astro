@@ -1,12 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import {Card, Inset, Text, Heading} from '@radix-ui/themes';
+import InfoCard from "../components/InfoCard.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<a href="/education">Education</a>
-		<a href="/industries">Industries</a>
-		<a href="/government">Government</a>
-		<a href="/income">The Middle Income Trap</a>
-	</main>
+<Layout title="Brazil">
+    <main aria-labelledby="main-heading">
+        <Heading as="h1" size="8" id="main-heading" className="text-center text-5xl m-4">Explore Issues in Brazil</Heading>
+        <div class="container">
+            <div class="row" role="list">
+                <InfoCard
+                        href="/education"
+                        src="/ph_12717_43488.jpg"
+                        alt="Classroom scene"
+                        category="Education"
+                        role="listitem"
+                />
+                <InfoCard
+                        href="/industries"
+                        src="/share_industry_data.jpg"
+                        alt="Factory interior"
+                        category="Industries"
+                        role="listitem"
+                />
+                <InfoCard
+                        href="/government"
+                        src="/lula-brazilpresident.webp"
+                        alt="Political rally"
+                        category="Government"
+                        role="listitem"
+                />
+                <InfoCard
+                        href="/income"
+                        src="/Untitled.jpg"
+                        alt="Traffic congestion"
+                        category="The Middle Income Trap"
+                        role="listitem"
+                />
+            </div>
+        </div>
+    </main>
 </Layout>

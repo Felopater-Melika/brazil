@@ -1,20 +1,11 @@
 ---
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '@radix-ui/themes/styles.css';
-import {Theme, Text} from '@radix-ui/themes';
+import {Text, Heading} from '@radix-ui/themes';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Government</title>
-</head>
-<body>
-<Theme>
-    <div class="flex justify-center items-center w-full">
-        <img src="/parliment-building-brazil.webp" alt="parliament" class="w-11/12 h-72">
+<Layout title="Government">
+    <div class="flex justify-center items-center w-full" role="img" aria-label="Brazil's Parliament Building">
+        <img src="/parliment-building-brazil.webp" alt="Brazil's Parliament Building" class="w-11/12 h-72">
     </div>
 
     <div class="container">
@@ -38,14 +29,14 @@ import {Theme, Text} from '@radix-ui/themes';
                     </Text>
                 </aside>
             </div>
-            <main class="col-md-9 bg-[#D9D9D9]">
+            <main class="col-md-9 bg-[#D9D9D9]" aria-labelledby="government-header">
                 <header>
-                    <h1 class="p-8 text-center">Branches of Government</h1>
+                    <h1 id="government-header" class="p-8 text-center">Branches of Government</h1>
                 </header>
-                <section class="mb-3">
-                    <h3>Executive</h3>
+                <section class="mb-3" aria-labelledby="executive-header">
+                    <Heading as="h3" id="executive-header" size="7">Executive</Heading>
                     <div class="flex w-full space-x-5">
-                        <img src="/lula-brazilpresident.webp" alt="executive" class="w-[300px] h-[300px] object-cover"/>
+                        <img src="/lula-brazilpresident.webp" alt="Brazil's Executive Branch" class="w-[300px] h-[300px] object-cover"/>
                         <Text as="p">
                             The executive branch of government is headed by the President and administered by the
                             Cabinet of
@@ -59,11 +50,9 @@ import {Theme, Text} from '@radix-ui/themes';
                         </Text>
                     </div>
                 </section>
-                <section class="mb-3">
-                    <h3>Legislative</h3>
+                <section class="mb-3" aria-labelledby="legislative-header">                    <Heading as="h3" size="7">Legislative</Heading>
                     <div class="flex w-full space-x-5">
-                        <img src="/legislation-brazil.jpg" alt="legislative" class="w-[300px] h-[300px] object-cover"/>
-                        <Text as="p">
+                        <img src="/legislation-brazil.jpg" alt="Brazil's Legislative Branch" class="w-[300px] h-[300px] object-cover"/>                        <Text as="p">
                             The legislative branch of government is administered by the National Congress and is
                             responsible
                             for writing and approving new laws. The Federal Senate and the Chamber of Deputies make up
@@ -80,11 +69,10 @@ import {Theme, Text} from '@radix-ui/themes';
                         </Text>
                     </div>
                 </section>
-                <section class="mb-3">
-                    <h3>Judicial</h3>
+                <section class="mb-3" aria-labelledby="judicial-header">
+                    <Heading as="h3" size="7">Judicial</Heading>
                     <div class="flex w-full space-x-5">
-                        <img src="/judicialbranchbrazil.jpg" alt="judicial" class="w-[300px] h-[300px] object-cover"/>
-                        <Text as="p">The judicial branch of government is designed based on a civil law adversarial
+                        <img src="/judicialbranchbrazil.jpg" alt="Brazil's Judicial Branch" class="w-[300px] h-[300px] object-cover"/>                        <Text as="p">The judicial branch of government is designed based on a civil law adversarial
                             system,
                             which means that cases are tried before a jury. The courts are divided into different
                             jurisdictions throughout state and federal governments with some specially designated
@@ -103,16 +91,18 @@ import {Theme, Text} from '@radix-ui/themes';
             </main>
         </div>
         <div class="row">
-            <footer class="col-md-12 bg-[#D9D9D9] mt-4">
-                <p>Footer with links to different pages of Brazilian govt.
-                    STJ Homepage - <a href="https://international.stj.jus.br/en">https://international.stj.jus.br/en</a>
-                    Official lists of legislations - <a href="http://www4.planalto.gov.br/legislacao/">www4.planalto.gov.br/legislacao/</a>
-                    Main govt homepage - <a href="https://www.gov.br/planalto/en/">https://www.gov.br/planalto/en/</a>
-                    US Dept of State webpage for Brazil - <a href="https://www.state.gov/countries-areas/brazil">https://www.state.gov/countries-areas/brazil</a>
+            <footer class="col-md-12 bg-[#D9D9D9] mt-4" role="contentinfo">
+                <p>
+                    Footer with links to different pages of Brazilian govt.
+                    STJ Homepage - <a href="https://international.stj.jus.br/en" aria-label="Visit STJ Homepage">https://international.stj.jus.br/en</a>
+                    Official lists of legislations - <a href="http://www4.planalto.gov.br/legislacao/"
+                                                        aria-label="View Official lists of Brazilian legislations">www4.planalto.gov.br/legislacao/</a>
+                    Main govt homepage - <a href="https://www.gov.br/planalto/en/"
+                                            aria-label="Visit Main Brazilian government homepage">https://www.gov.br/planalto/en/</a>
+                    US Dept of State webpage for Brazil - <a href="https://www.state.gov/countries-areas/brazil"
+                                                             aria-label="US Department of State webpage for Brazil">https://www.state.gov/countries-areas/brazil</a>
                 </p>
             </footer>
         </div>
     </div>
-</Theme>
-</body>
-</html>
+</Layout>

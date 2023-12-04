@@ -1,77 +1,71 @@
 ---
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '@radix-ui/themes/styles.css';
-import {Theme, Text} from '@radix-ui/themes';
+import {Text, Heading} from '@radix-ui/themes';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Middle Income Trap</title>
-</head>
-<body>
-<Theme>
+<Layout title="The Middle Income Trap">
     <div class="container">
-    <header>
-        <img src="/Untitled.jpg" alt="cars" class="w-full">
-        <h1 class="bg-[#A6453C] text-white text-center">The Middle Income Trap</h1>
-    </header>
-    <main>
-        <section>
-
-            <Text as="p">The middle income trap simply refers to a situation where a country can become stuck,
-                financially, at a certain level. This happens because more jobs are created within a country and then
-                more people move to the area for these jobs. Unfortunately, the conditions of the jobs, along with
-                training and pay, become stagnant and they do not grow any longer. This becomes an issue because
-                inflation then drives up the cost of living due to all of the additional growth, but people can not
-                afford to live based on their present incomes.
-            </Text>
-
-            <br/>
-            <Text as="p">Brazil has been stuck in the middle income trap for many decades due to these issues. While
-                they have worked to resolve many of the issues around this trap, there is still more work to be done.
-            </Text>
-        </section>
-        <section>
-            <h1 class="bg-[#A6453C] text-white text-center">Brazil is Making Strides to Combat this trap</h1>
-            <ul class="list-disc pl-4">
-                <li>Fixing the economic instabilities – This took more than two decades to get a good handle on, but
-                    once the policy and institutional reforms were implemented, stable gains showed improvement and
-                    steady growth for Brazil’s economy.
-                </li>
-                <li>Exclusion Trap – Most of Brazil’s population has remained in poverty, while Brazil’s average per
-                    capital income continues to rank among the upper-middle income countries. They continue to combat
-                    this imbalance by offering improved access to healthcare, more opportunities for financial services
-                    help, and better education opportunities (including on-the-job training) for children and adults.
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h1 class="bg-[#A6453C] text-white text-center">What’s Next for Brazil</h1>
-            <Text as="p">There are many different routes Brazil needs to go to get their economy back on track:</Text>
-            <ul class="list-disc pl-4">
-                <li>Infrastructure Development and Investment – Brazil has opportunities to invest in their current
-                    infrastructure. This would allow for fine tuning of the public and private sectors to allow for
-                    better efficiencies.
-                </li>
-                <li>Cost of business – Taxes and other bureaucratic requirements make doing business in Brazil difficult
-                    and expensive. Brazil has proven that there are many opportunities for improvement within their tax
-                    systems to give businesses more opportunities to conduct their businesses efficiently and to pay
-                    employees better – salaries and benefits.
-                </li>
-                <li>Government Reform – Brazil needs to become more transparent with their taxpayers. The government
-                    needs a reliable communication tool (such as a government website) that would regularly post the
-                    financial status of various departments of their office. This would include overall government
-                    spending, along with broken down on how the government is spending the taxpayer money. This allows
-                    for the community to see and then vote accordingly to their own values and beliefs on how the
-                    government should be run.
-                </li>
-            </ul>
-        </section>
-    </main>
+        <header aria-labelledby="page-heading">
+            <img src="/Untitled.jpg" alt="Traffic in Brazil representing middle income trap" class="w-full">
+            <Heading as="h1" id="page-heading" size="8" className="bg-[#A6453C] p-2 text-white text-center">The Middle Income Trap</Heading>
+        </header>
+        <main>
+            <section>
+                <Text as="p">The middle income trap simply refers to a situation where a country can become stuck,
+                    financially, at a certain level. This happens because more jobs are created within a country and
+                    then
+                    more people move to the area for these jobs. Unfortunately, the conditions of the jobs, along with
+                    training and pay, become stagnant and they do not grow any longer. This becomes an issue because
+                    inflation then drives up the cost of living due to all of the additional growth, but people can not
+                    afford to live based on their present incomes.
+                </Text>
+                <br/>
+                <Text as="p">Brazil has been stuck in the middle income trap for many decades due to these issues. While
+                    they have worked to resolve many of the issues around this trap, there is still more work to be
+                    done.
+                </Text>
+            </section>
+            <section aria-labelledby="strides-heading">
+                <Heading as="h2" id="strides-heading" size="8" className="bg-[#A6453C] p-2 text-white text-center">Brazil is Making Strides to Combat this trap</Heading>
+                <ul class="list-disc pl-4" role="list">
+                    <li role="listitem">Fixing the economic instabilities – This took more than two decades to get a good handle on, but
+                        once the policy and institutional reforms were implemented, stable gains showed improvement and
+                        steady growth for Brazil’s economy.
+                    </li>
+                    <li role="listitem">Exclusion Trap – Most of Brazil’s population has remained in poverty, while Brazil’s average per
+                        capital income continues to rank among the upper-middle income countries. They continue to
+                        combat
+                        this imbalance by offering improved access to healthcare, more opportunities for financial
+                        services
+                        help, and better education opportunities (including on-the-job training) for children and
+                        adults.
+                    </li>
+                </ul>
+            </section>
+            <section aria-labelledby="next-steps-heading">
+                <Heading as="h2" id="next-steps-heading" size="8" className="bg-[#A6453C] p-2 text-white text-center">What’s Next for Brazil</Heading>
+                <ul class="list-disc pl-4" role="list">
+                    <li role="listitem">Infrastructure Development and Investment – Brazil has opportunities to invest in their current
+                        infrastructure. This would allow for fine tuning of the public and private sectors to allow for
+                        better efficiencies.
+                    </li>
+                    <li role="listitem">Cost of business – Taxes and other bureaucratic requirements make doing business in Brazil
+                        difficult
+                        and expensive. Brazil has proven that there are many opportunities for improvement within their
+                        tax
+                        systems to give businesses more opportunities to conduct their businesses efficiently and to pay
+                        employees better – salaries and benefits.
+                    </li>
+                    <li role="listitem">Government Reform – Brazil needs to become more transparent with their taxpayers. The government
+                        needs a reliable communication tool (such as a government website) that would regularly post the
+                        financial status of various departments of their office. This would include overall government
+                        spending, along with broken down on how the government is spending the taxpayer money. This
+                        allows
+                        for the community to see and then vote accordingly to their own values and beliefs on how the
+                        government should be run.
+                    </li>
+                </ul>
+            </section>
+        </main>
     </div>
-</Theme>
-</body>
-</html>
+</Layout>

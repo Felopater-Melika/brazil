@@ -1,29 +1,22 @@
 ---
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '@radix-ui/themes/styles.css';
-import {Theme, Text} from '@radix-ui/themes';
+import {Text, Heading} from '@radix-ui/themes';
 import Carousel from '../components/Carousel';
 const images = ['oil.webp', 'services.jpeg', 'share_industry_data.jpg', '/cotton.jpeg']
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industries</title>
-</head>
-<body>
-<Theme>
-    <header>
-        <h1 class="text-white bg-[#A6453C] p-8 text-center">Brazil’s Leading Industries</h1>
+<Layout title="Industries">
+    <header aria-labelledby="main-heading">
+        <h1 id="main-heading" class="text-white bg-[#A6453C] p-8 text-center">Brazil’s Leading Industries</h1>
     </header>
     <main class="container">
-        <section class="bg-[#F2F2F0] pb-4">
+        <section class="bg-[#F2F2F0] pb-4" aria-labelledby="leading-industries-heading">
             <div class="block" style={{height: '750px'}}>
-                <Carousel images={images} client:load/>
+                <Carousel images={images} client:load aria-label="Image carousel of Brazil's industries"/>
             </div>
-            <h2 class="text-center">Leading industries and their employment</h2>
+            <Heading as="h2" id="leading-industries-heading" size="7" className="text-center">Leading industries and
+                their employment
+            </Heading>
             <Text as="p">
                 &emsp; Brazil is made up of many industries. Leading the charge with the biggest sector
                 would be products and services which makes up around 70% of the countries employment
@@ -41,9 +34,10 @@ const images = ['oil.webp', 'services.jpeg', 'share_industry_data.jpg', '/cotton
                 every .20 USD.
             </Text>
         </section>
-        <section class="bg-[#D9D9D9] pb-4">
-            <h2 class="text-center bg-[#024873] p-8 text-white">Petrobras Scandal</h2>
-
+        <section class="bg-[#D9D9D9] pb-4" aria-labelledby="petrobras-scandal-heading">
+            <Heading as="h2" id="petrobras-scandal-heading" size="7"
+                     className="text-center bg-[#024873] p-8 text-white">Petrobras Scandal
+            </Heading>
             <Text as="p">
                 &emsp; In 2004 the largest corruption scandal in any democratic country took
                 shape through Petrobras. Petrobras is a state owned oil company. It is one
@@ -77,8 +71,10 @@ const images = ['oil.webp', 'services.jpeg', 'share_industry_data.jpg', '/cotton
                 which is why this went on as long as it did.
             </Text>
         </section>
-        <section class="bg-[#D9D9D9]">
-            <h2 class="text-white bg-[#A6453C] p-8 text-center">Corruption</h2>
+        <section class="bg-[#D9D9D9]" aria-labelledby="corruption-heading">
+            <Heading as="h2" id="corruption-heading" size="7" className="text-white bg-[#A6453C] p-8 text-center">
+                Corruption
+            </Heading>
             <Text as="p">
                 &emsp; A big reason for the lack of growth and thriving economy is due to the corruption
                 in the industries. There is a great anti corruption act that was put into place in
@@ -90,6 +86,4 @@ const images = ['oil.webp', 'services.jpeg', 'share_industry_data.jpg', '/cotton
             </Text>
         </section>
     </main>
-</Theme>
-</body>
-</html>
+</Layout>
