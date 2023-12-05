@@ -1,12 +1,81 @@
 ---
 import {Text, Heading} from '@radix-ui/themes';
 import Carousel from '../components/Carousel';
-const images = ['oil.webp', 'services.jpeg', 'share_industry_data.jpg', '/cotton.jpeg']
+const images = ['28b04c28e1667ece6b873f931dd832ab-Full.webp', '8379f05e414482c7a28ee20e321ad8fb-Full.webp', 'a25dba8aeb9dde5123fe2ea9f5f49f63-Full.webp', 'f5c74a860066db6ed64f75dc2ac05662-Full.webp', 'fcdc5f319bf7a5400a05d800e9572b63-Full.webp']
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Industries">
-    <header aria-labelledby="main-heading">
-        <h1 id="main-heading" class="text-white bg-[#A6453C] p-8 text-center">Geography</h1>
-    </header>
+<Layout title="Geography">
+    <div class="container">
+        <header aria-labelledby="main-heading">
+            <Heading as="h1" size="9" id="main-heading" className="p-8 text-center">Geography</Heading>
+        </header>
+        <div class="block" style={{height: '750px'}}>
+            <Carousel images={images} client:load aria-label="Image carousel of Brazil's industries"/>
+        </div>
+        <main aria-labelledby="main-heading">
+            <section aria-labelledby="income-map-heading">
+                <Heading as="h2" id="income-map-heading" size="8" className="underline font-bold mb-4">INCOME MAP</Heading>
+                <div class="flex">
+                    <Text as="p">
+                    This map shows the income group distribution of Brazilian areas. Socioeconomic data was
+                    extracted from Brazilian Institute of Geography and Statistic (IBGE). It also shows the Brazilian
+                    gross
+                    domestic product to classify areas according to income groups as high income, upper-middle income,
+                    or
+                    lower-middle income.​
+                    </Text>
+                    <img src="/bf836c830f116cd58ba4b6bdbac5241f-Full.webp" alt="Income group distribution map of Brazilian areas"/>
+                </div>
+            </section>
+            <section aria-labelledby="poverty-areas-heading">
+                <Heading as="h2" id="poverty-areas-heading" size="8" className="underline font-bold mb-4">POVERTY AREAS</Heading>
+            <Heading as="h4" size="6" className="font-bold text-center">Piaui</Heading>
+            <ul class="list-disc pl-4" role="list">
+                <li role="listitem">80% of the inhabitants located in Piauí, a Brazilian state located in the northeast
+                    region of the country, in the arid area of Sertão, suffer from hunger.
+                </li>
+                <li role="listitem">The issue is even more critical among the children of the state. Hunger and
+                    malnutrition affect their development in various ways such as infant mortality and social effects
+                    that affect memory and attention.​
+                </li>
+            </ul>
+            <Heading as="h4" size="6" className="font-bold text-center">Maranhao</Heading>
+            <ul class="list-disc pl-4" role="list">
+                <li role="listitem">Maranhao is a part of the Amazonian region with the highest proportion of population
+                    in extreme poverty in the country.​
+                </li>
+                <li role="listitem">The World Bank defines US $1.90 per day as the extreme poverty line, US $3.20 as the
+                    poverty line in lower-middle income countries, and US $5.50 as the standard line for upper-middle
+                    income countries. ​
+                </li>
+            </ul>
+            <Heading as="h4" size="6" className="font-bold text-center">Alagoas</Heading>
+            <ul class="list-disc pl-4" role="list">
+                <li role="listitem">Due to a rapid 42.7% population increase in the past 25 years, infrastructure was
+                    not ready for growth. Thousands suffer without access to plumbing or electricity.​
+                </li>
+                <li role="listitem">In this area, many essential life needs are difficult for people to attain clean
+                    water.​
+                </li>
+            </ul>
+            <Heading as="h4" size="6" className="font-bold text-center">Paraiba</Heading>
+
+            <ul class="list-disc pl-4" role="list">
+                <li role="listitem">This region suffers from a history of educational neglect even though the state has
+                    recently made significant gains in primary school enrollment.​
+                </li>
+                <li role="listitem">faced the worst drought in its recent history, which put more than 90% of Paraíba
+                    areas in a state of emergency and had major complications for agriculture, electricity and water
+                    supply.​
+                </li>
+            </ul>
+            </section>
+            <section aria-labelledby="unemployment-rates-heading">
+                <Heading as="h2" id="unemployment-rates-heading" size="7" className="text-center">Unemployment Rates of the Four Regions</Heading>
+                <img src="/ae45e2f3e265a31f9076b2af782d3045-Full.webp" alt="Bar chart showing unemployment rates in different regions of Brazil" class="w-full"/>
+                <img src="/ca2af21cd7110f04b0d252a862b23782-Full.webp" alt="Chart depicting various statistics related to unemployment in Brazil" class="w-full"/>
+            </section>
+        </main>
+    </div>
 </Layout>
